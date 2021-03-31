@@ -5,6 +5,11 @@ const list_items = document.querySelector(".list_items");
 add_item.addEventListener("click", additem);
 list_items.addEventListener("click", compDel);
 
+textbox.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        additem(event);
+    }
+});
 
 function additem(e) {
     e.preventDefault();
@@ -35,6 +40,8 @@ function additem(e) {
 
 function compDel(e) {
     const list_item = e.target;
-    console.log(list_item.parentElement)
-    list_item.parentElement.remove();
+    if (list_item.classList[0] == "del_btn")
+        list_item.parentElement.remove();
+    else if (list_item.classList[0] == "complete_btn")
+        list_item.parentElement.classList.toggle("completed");
 }
