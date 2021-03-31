@@ -1,3 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: linear-gradient(120deg,#f6d365 0%, #fda085 100%);
+}
+
 .list_items{
+    min-width: 20%;
     list-style: none;
+}
+
+form{
+    min-height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form button{
+    cursor:pointer;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complete_btn, .del_btn{
+    background-color: #fda085;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color:greenyellow;
+}
+
+.div{
+    background-image: linear-gradient(120deg, #fda085 100%, #f6d365 0%);
+    margin:0.5rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div li{
+    flex: 1;
 }
