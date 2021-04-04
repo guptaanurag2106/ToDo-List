@@ -21,6 +21,12 @@ form{
 
 form button{
     cursor:pointer;
+    width:30px;
+}
+
+form button:hover, .complete_btn:hover, .del_btn:hover{
+    background-color:rgb(255, 136, 0);
+    color:white;
 }
 
 .completed{
@@ -34,18 +40,23 @@ form button{
     align-items: center;
 }
 
-.complete_btn, .del_btn{
-    background-color: #fda085;
+.complete_btn{
+    margin-left:0.1rem;
+    background-color: rgb(8, 248, 8);
     cursor: pointer;
+    width:25px;
 }
 
-form button:hover{
-    background-color:greenyellow;
+.del_btn{
+    margin-left:0.2rem;
+    background-color:rgb(247, 75, 7);
+    cursor:pointer;
+    width:25px;
 }
 
 .div{
-    background-image: linear-gradient(120deg, #fda085 100%, #f6d365 0%);
-    margin:0.5rem;
+    background-color: white;
+    margin:1rem;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -53,4 +64,8 @@ form button:hover{
 
 .div li{
     flex: 1;
+}
+
+.fa-check, .fa-trash{
+    pointer-events: none;
 }
